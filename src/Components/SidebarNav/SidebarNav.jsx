@@ -22,12 +22,12 @@ const SidebarNav = () => {
                             </>
                         )
                     })
-                }
-                <li><Link to="/users">users</Link></li>
+                } 
+
                  
             </ul>
             <ul className="bottomList"> 
-                <li><a href="/"><img src={setting} /></a></li>
+                <li><Link to="/users"><img src={setting} /></Link></li>
             </ul>
         </div>
     )
