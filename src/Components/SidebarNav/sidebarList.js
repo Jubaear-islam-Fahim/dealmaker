@@ -35,7 +35,7 @@ const navList = [
     },
     {
         id: 7,
-        img: Add_ins,
+        img: Add_ins, 
     },
      
 ]

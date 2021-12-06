@@ -3,7 +3,9 @@ import "./SidebarNav.scss";
 
 import NavList from './sidebarList';
 
+
 import setting from '../../images/nav/settings.png';
+import { Link } from 'react-router-dom';
 
 const SidebarNav = () => {  
     const [items] = useState(NavList);
@@ -21,6 +23,7 @@ const SidebarNav = () => {
                         )
                     })
                 }
+                <li><Link to="/users">users</Link></li>
                  
             </ul>
             <ul className="bottomList"> 
