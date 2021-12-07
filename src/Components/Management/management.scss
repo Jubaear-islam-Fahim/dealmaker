@@ -75,6 +75,9 @@
             // justify-content: center;
             height: 21px;
         }
+        &:last-child{
+            float: right;
+        }
     }
 
     .pass-r {
@@ -142,7 +145,7 @@
         padding: 15px 4px;
 
         .btn-close {
-            background-position: center/15px;
+            background-size: 13px;
             position: absolute;
             right: 15px;
             top: 15px;
@@ -163,7 +166,7 @@
     p {
         font-weight: normal;
         font-size: 16px;
-        padding-bottom: 25px;
+        padding-bottom: 20px;
         line-height: 28px;
 
         a {
@@ -172,7 +175,7 @@
     }
 
     .modal-btn a {
-        background: var(--primary-bg);
+        background: #051B5D;
         color: white;
         border-radius: 5px;
         width: 193.23px;

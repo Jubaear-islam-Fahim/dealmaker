@@ -2,8 +2,7 @@ import React, {useState} from 'react';
 import { Breadcrumb } from 'react-bootstrap';   
 import { FaSearch } from "react-icons/fa";
 import './management.scss';
-
-import SidebarNav from '../SidebarNav/SidebarNav';
+ 
 import NavBar from '../NavBar/NavBar'; 
 import Table_users from './TableUsers'; 
 
@@ -20,8 +19,7 @@ const ManagementUsers = () => {
     return (
         <>
             <NavBar/>
-            <main className="wrapper">
-                <SidebarNav/>
+            <main className="wrapper"> 
                 <div className="page-content"> 
                     <div className="management-area">
                         <div className="management-user">

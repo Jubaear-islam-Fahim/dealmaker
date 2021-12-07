@@ -1,21 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {Dropdown, } from 'react-bootstrap';
-
+ 
 import './navBar.scss';
 
 import bar from '../../images/bar.png';
 import logo from '../../images/logo.png';
 import user from '../../images/user1.png';
+import setting from '../../images/nav/settings.png';
+
+import { SidebarData } from './SidebarData';
 
 import { FaCog, FaBell, FaLock, FaUserAlt, FaSignOutAlt  } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
+    const [sidebar, setSidebar] = useState(false); 
+    const showSidebar = () => setSidebar(!sidebar);
+    
     return (
+        <>
         <div className="navbar-area ">
             <div className="navleft">
-                <a href="/"><img src={bar} alt="" /></a>
-                <a href="/"><img src={logo} alt="" /></a>
+                <button onClick={showSidebar} className="navToggle"><img src={bar} alt="" /></button>
+                <Link to="/"><img src={logo} alt="" /></Link>
             </div>
             <div className="navright ">
 
@@ -33,14 +41,34 @@ const NavBar = () => {
                     <Dropdown.Menu className="userList">
                         <ul>
                             <li><h6 class="text-overflow m-0">Welcome !</h6></li>
-                            <li><a href="#"><FaUserAlt/> My Account</a></li>
-                            <li><a href="#"><FaLock/> Lock Screen</a></li>
-                            <li><a href="#"><FaSignOutAlt/> Sign Out</a></li> 
+                            <li><Link href="#"><FaUserAlt/> My Account</Link></li>
+                            <li><Link href="#"><FaLock/> Lock Screen</Link></li>
+                            <li><Link href="#"><FaSignOutAlt/> Sign Out</Link></li> 
                         </ul> 
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
         </div>
+
+        <nav className={sidebar ? 'sidebarNav active' : 'sidebarNav'}>
+          <ul className='nav-menu-items' onClick={showSidebar}> 
+            {SidebarData.map((item, index) => {
+              return (
+                <li key={index} className={item.cName}>
+                  <Link to={item.path}>
+                    <img src={item.icon} />
+                    {/* <span>{item.title}</span> */}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <ul className="bottomList"> 
+                <li><Link to="/users"><img src={setting} /></Link></li>
+            </ul>
+        </nav>
+
+        </>
     )
 }
 

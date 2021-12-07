@@ -1,8 +1,41 @@
 .page-content {
-    padding: 30px 40px;
+    padding: 30px 4vw;
 }
 
 .page-url {
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 40px;
+
+        li {
+            display: inline-block;
+            position: relative;
+            &::after{
+                content: '>';
+                margin-left: 10px;
+            }
+            &:last-child::after{
+                display: none;
+            }
+            a {
+                font-weight: normal;
+                font-size: 18px;
+                color: #000000;
+            }
+        }
+
+        .active {
+            a {
+
+                font-weight: 500;
+                font-size: 24px;
+                color: #000000;
+            }
+        }
+    }
+
     .breadcrumb {
         align-items: center;
         color: #000000;
@@ -14,7 +47,7 @@
         color: #000000;
     }
 
-    
+
     .breadcrumb-item+.breadcrumb-item::before {
         color: #000000;
         content: var(--bs-breadcrumb-divider, ">");
@@ -23,8 +56,10 @@
         align-items: center;
         padding-top: 4px;
     }
-    .breadcrumb-item+.breadcrumb-item:nth-child(2){
+
+    .breadcrumb-item+.breadcrumb-item:nth-child(2) {
         padding-top: 2px;
+
         &::before {
             padding-top: 0px;
         }
@@ -115,8 +150,9 @@
         .h4 {
             display: grid;
             min-height: 90px;
-            grid-template-columns: 1fr 60px;
-
+            grid-template-columns: 1fr 90px;
+            font-weight: 600;
+            font-size: 20px;
             span {
                 text-align: right;
                 font-weight: 500;
@@ -254,5 +290,12 @@
         }
 
 
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 1380px){
+    .application-area {
+        padding-bottom: 45px;
     }
 }

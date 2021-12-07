@@ -67,8 +67,15 @@ body{
     box-shadow:unset
 }
 
-
 main.wrapper {
-    padding-top: 80px;
-    padding-left: 80px;
+    height: calc(100vh - 63px);
+    overflow-y: scroll;
+    position: relative;
+    top: 63px;
+    padding: 30px 0;
+	width: 100%;
+}
+
+#root{
+	display: flex;
 }

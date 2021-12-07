@@ -3,8 +3,7 @@ import "./SEnvironment.scss";
 import { Breadcrumb } from 'react-bootstrap';   
 import { FaSearch, FaCircle, FaPlusCircle } from "react-icons/fa"; 
 import EnvironmentList from './Environment';
-
-import SidebarNav from '../SidebarNav/SidebarNav';
+ 
 import NavBar from '../NavBar/NavBar';
 import { Link } from 'react-router-dom';
  
@@ -14,15 +13,14 @@ const SEnvironment = () => {
     return (
         <>
             <NavBar/>
-            <main className="wrapper">
-                <SidebarNav/>
+            <main className="wrapper"> 
                 <div className="page-content"> 
                     <div className="environment-area">
                         <div className="page-url">
-                            <Breadcrumb>
-                                <Breadcrumb.Item href="/">Home</Breadcrumb.Item> 
-                                <Breadcrumb.Item active> Select Environment</Breadcrumb.Item>
-                            </Breadcrumb>
+                            <ul>
+                                <li><Link to="/">Home</Link></li>
+                                <li className="active"><Link to="/">Select Environment</Link></li> 
+                            </ul> 
                         </div>
                         <div className="search-meta">
                             <form action="" className="d-flex">

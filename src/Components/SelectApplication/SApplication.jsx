@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
-import { Breadcrumb, Link } from 'react-bootstrap';   
+import React, {useState} from 'react'; 
 import './SApplication.scss';
+
+import { Link } from 'react-router-dom';
 
 import { FaCircle } from "react-icons/fa"; 
 import transit from "../../images/transit.png"
@@ -8,8 +9,7 @@ import profile from "../../images/prof.png";
 import mes from "../../images/mes.png";
 import leica from "../../images/leica.png";
 import space from "../../images/space.png";
-
-import SidebarNav from '../SidebarNav/SidebarNav';
+ 
 import NavBar from '../NavBar/NavBar';
 
 const SApplication = () => {
@@ -17,18 +17,18 @@ const SApplication = () => {
     return (
         <>
             <NavBar/>
-            <main className="wrapper">
-                <SidebarNav/>
+            <main className="wrapper"> 
                 <div className="page-content"> 
                     <div className="application-area">
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="page-url">
-                                    <Breadcrumb>
-                                        <Breadcrumb.Item href="/">Home</Breadcrumb.Item> 
-                                        <Breadcrumb.Item href="/">Select Environment</Breadcrumb.Item> 
-                                        <Breadcrumb.Item active> Select Application</Breadcrumb.Item>
-                                    </Breadcrumb>
+                                    <ul>
+                                        <li><Link to="/">Home</Link></li>
+                                        <li><Link to="/">Select Environment</Link></li>
+                                        <li className="active"><Link to="/">Select Application</Link></li>
+                                    </ul>
+                                    
                                 </div>
                             </div>
                             <div className="col-lg-6">  
@@ -54,7 +54,7 @@ const SApplication = () => {
                                     </div>
                                 </div> 
                                 <div className="switch">
-                                    <a href="/">Switch Environment</a>
+                                    <Link to="/">Switch Environment</Link>
                                 </div>
                             </div>
                         </div>

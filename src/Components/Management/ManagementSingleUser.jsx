@@ -1,8 +1,7 @@
 import React from 'react';
 import { Breadcrumb } from 'react-bootstrap'; 
 import './management.scss';
-
-import SidebarNav from '../SidebarNav/SidebarNav';
+ 
 import NavBar from '../NavBar/NavBar';  
 import TableTracker from './TableTracker'
 
@@ -19,8 +18,7 @@ const ManagementSingleUser = () => {
     return (
         <>
             <NavBar/>
-            <main className="wrapper">
-                <SidebarNav/>
+            <main className="wrapper"> 
                 <div className="page-content"> 
                     <div className="management-area">
                         <div className="management-user">
