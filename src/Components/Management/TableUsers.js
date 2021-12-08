@@ -138,13 +138,13 @@ class SelectTableComponent extends React.Component {
                       onChange={(e) => this.onMasterCheck(e)}
                     />
                   </th>
-                  <th scope="col">ID <img src={aUp}/> </th>
-                  <th scope="col">Name</th>
-                  <th scope="col">E-Mail</th>
-                  <th scope="col">Password</th>
-                  <th scope="col">Status</th>
-                  <th scope="col">Roles</th>
-                  <th scope="col">Environment</th>
+                  <th scope="col" className="id">ID <img src={aUp}/> </th>
+                  <th scope="col" className="name">Name</th>
+                  <th scope="col" className="email">E-Mail</th>
+                  <th scope="col" className="password">Password</th>
+                  <th scope="col" className="status">Status</th>
+                  <th scope="col" className="roles">Roles</th>
+                  <th scope="col" className="enviro">Environment</th>
                   <th scope="col"></th>
                 </tr>
               </thead>

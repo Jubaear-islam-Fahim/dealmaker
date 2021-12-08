@@ -299,3 +299,37 @@
         padding-bottom: 45px;
     }
 }
+
+@media (min-width: 320px) and (max-width: 900px){
+    .environment-content { 
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    .environment-item .bottom { 
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .environment-item .bottom button { 
+        height: 44px;
+        width: 100%; 
+    }
+    .search-meta {
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+    }
+    .new-environ { 
+        min-height: 280px;
+    }
+    .environment-item .header .id span { 
+        font-size: 11px;
+    }
+    .environment-item .header .h4 span::after, .environment-item .header .h4 span::before {
+         
+        font-size: 10px;
+    }
+    .page-url ul li a { 
+        font-size: 12px; 
+    }
+    .page-url ul .active a { 
+        font-size: 17px; 
+    }
+}

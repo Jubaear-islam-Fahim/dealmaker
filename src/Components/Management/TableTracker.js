@@ -133,11 +133,11 @@ class TableTracker extends React.Component {
                       onChange={(e) => this.onMasterCheck(e)}
                     />
                   </th>
-                  <th scope="col">ID <img src={aUp}/></th>
-                  <th scope="col">Timestamp</th>
-                  <th scope="col">Activity</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">Environment / App</th> 
+                  <th scope="col" className="id">ID <img src={aUp}/></th>
+                  <th scope="col" className="name">Timestamp</th>
+                  <th scope="col" className="desc">Activity</th>
+                  <th scope="col" className="descrp">Description</th>
+                  <th scope="col" className="name">Environment / App</th> 
                   <th scope="col"></th>
                 </tr>
               </thead>

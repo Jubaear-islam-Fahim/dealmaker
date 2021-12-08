@@ -57,7 +57,7 @@ const NavBar = () => {
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>
                     <img src={item.icon} />
-                    {/* <span>{item.title}</span> */}
+                    <span className="text">{item.title}</span>
                   </Link>
                 </li>
               );

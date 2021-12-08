@@ -9,43 +9,43 @@ import Add_ins from '../../images/nav/more_horiz.png';
 
 export const SidebarData = [
   {
-    // title: 'Dashboard',
+    title: 'Dashboard',
     path: '/',
     icon: Home,
     cName: 'nav-text'
   },
   {
-    // title: 'Analytics',
+    title: 'Analytics',
     path: '/',
     icon: Analytics,
     cName: 'nav-text'
   },
   {
-    // title: 'Dialogue Management',
+    title: 'Dialogue Management',
     path: '/',
     icon: Management,
     cName: 'nav-text'
   },
   {
-    // title: 'Calender',
+    title: 'Calender',
     path: '/',
     icon: Calender,
     cName: 'nav-text'
   },
   {
-    // title: 'Workflows',
+    title: 'Workflows',
     path: '/',
     icon: Workflows,
     cName: 'nav-text'
   },
   {
-    // title: 'Database',
+    title: 'Database',
     path: '/',
     icon: Database,
     cName: 'nav-text'
   },
   {
-    // title: 'Add ins',
+    title: 'Add ins',
     path: '/',
     icon: Add_ins,
     cName: 'nav-text'

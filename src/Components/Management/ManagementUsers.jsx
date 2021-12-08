@@ -24,10 +24,10 @@ const ManagementUsers = () => {
                     <div className="management-area">
                         <div className="management-user">
                             <div className="page-url">
-                                <Breadcrumb>
-                                    <Breadcrumb.Item href="/">Home</Breadcrumb.Item> 
-                                    <Breadcrumb.Item active> User Management</Breadcrumb.Item>
-                                </Breadcrumb>
+                                <ul>
+                                    <li><Link to="/">Home</Link></li> 
+                                    <li className="active"><Link to="/">User Management</Link></li>
+                                </ul>
                             </div>
                             <ul className="user-list">
                                 <li className="active"><Link to="/users"><img src={useri} /> Users</Link></li>

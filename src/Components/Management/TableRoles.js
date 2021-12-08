@@ -138,13 +138,13 @@ class TableRoles extends React.Component {
                       onChange={(e) => this.onMasterCheck(e)}
                     />
                   </th>
-                  <th scope="col">ID <img src={aUp}/></th>
-                  <th scope="col">Role Name</th>
+                  <th scope="col" className="id">ID <img src={aUp}/></th>
+                  <th scope="col" className="name">Role Name</th>
                   <th scope="col">Permissions</th>
                   <th scope="col">User Count</th>
-                  <th scope="col">Used in Apps</th> 
-                  <th scope="col">Used in Modules</th> 
-                  <th scope="col">Environments</th> 
+                  <th scope="col" className="used">Used in Apps</th> 
+                  <th scope="col" className="enviro">Used in Modules</th> 
+                  <th scope="col" className="enviro">Environments</th> 
                   <th scope="col"></th>
                 </tr>
               </thead>

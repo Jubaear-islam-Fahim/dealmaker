@@ -5,6 +5,7 @@ import './management.scss';
 import search from '../../images/sesr.png';  
 import aUp from '../../images/aup.png';
 
+
 const Users = [
   {
     id: 1,
@@ -106,13 +107,13 @@ class TableRoles extends React.Component {
                       onChange={(e) => this.onMasterCheck(e)}
                     />
                   </th>
-                  <th scope="col">ID <img src={aUp}/></th>
-                  <th scope="col">Permission Name</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">Application</th>
-                  <th scope="col">Component</th> 
-                  <th scope="col">Module</th> 
-                  <th scope="col">Roles</th> 
+                  <th scope="col" className="id">ID <img src={aUp}/></th>
+                  <th scope="col" className="name">Permission Name</th>
+                  <th scope="col" className="desc">Description</th>
+                  <th scope="col" className="desc">Application</th>
+                  <th scope="col" className="desc">Component</th> 
+                  <th scope="col" className="desc">Module</th> 
+                  <th scope="col" className="desc">Roles</th> 
                   <th scope="col"></th>
                 </tr>
               </thead>

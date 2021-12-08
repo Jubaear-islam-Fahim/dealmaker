@@ -10,13 +10,12 @@
 
     .application-left {
         ul {
-            padding-top: 10px;
-
+             
             li {
                 font-size: 14px;
                 display: inline-block;
                 padding-right: 18px;
-                padding-top: 10px;
+                padding-top: 16px;
             }
         }
     }
@@ -155,3 +154,11 @@
     }
 }
 
+@media (min-width: 320px) and (max-width: 900px){
+    .recent-environment-content{
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    .application-item{
+        display: block;
+    }
+}

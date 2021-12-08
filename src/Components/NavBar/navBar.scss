@@ -136,6 +136,9 @@
                 background: var(--primary-color);
             }
         }
+        .text{
+            display: none;
+        }
     }
 
     .bottomList{
@@ -157,5 +160,11 @@
     .sidebarNav ul a img {
         width: 80%;
         margin: 0 auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 900px){
+    span.Uname {
+        display: none;
     }
 }
