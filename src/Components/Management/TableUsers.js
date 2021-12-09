@@ -7,84 +7,45 @@ import { Link } from 'react-router-dom';
 import search from '../../images/sesr.png';
 import key from '../../images/key.png';
 import aUp from '../../images/aup.png';
-<<<<<<< HEAD
 import { ModalReset } from "./ModalReset";
  
-=======
->>>>>>> 1835a9287e575777a9960e5f7597c05c5c32f9c3
 
 const Users = [
   {
     id: '1',
     selected: false,
-<<<<<<< HEAD
     name: "Julian Leudesdorff",
     email: "julian.leudesdorff@susiandjames.com", 
     status: "Active",
     roles: "Admin, Editor, Viewer",
     environment: "3 Environments", 
-=======
-    name: 'Aulian Leudesdorf',
-    email: 'julian.leudesdorff@susiandjames.com',
-
-    status: 'Active',
-    roles: 'Admin, Editor, Viewer',
-    environment: 'Dr. Eckermann & Bauer',
->>>>>>> 1835a9287e575777a9960e5f7597c05c5c32f9c3
   },
   {
     id: '2',
     selected: false,
-<<<<<<< HEAD
     name: "Julian Leudesdorff",
     email: "julian.leudesdorff@susiandjames.com", 
     status: "Active",
     roles: "Admin, Editor, Viewer",
     environment: "17 Environments", 
-=======
-    name: 'Bulian Leudesdorff',
-    email: 'julian.leudesdorff@susiandjames.com',
-
-    status: 'Active',
-    roles: 'Admin, Editor, Viewer',
-    environment: 'Dr. Eckermann & Bauer',
->>>>>>> 1835a9287e575777a9960e5f7597c05c5c32f9c3
   },
   {
     id: '3',
     selected: false,
-<<<<<<< HEAD
     name: "Julian Leudesdorff",
     email: "julian.leudesdorff@susiandjames.com", 
     status: "Inactive",
     roles: "Admin, Editor, Viewer",
     environment: "Dr. Eckermann & Bauer", 
-=======
-    name: 'Culian Leudesdorff3',
-    email: 'julian.leudesdorff@susiandjames.com',
-
-    status: 'Active',
-    roles: 'Admin, Editor, Viewer',
-    environment: 'Dr. Eckermann & Bauer',
->>>>>>> 1835a9287e575777a9960e5f7597c05c5c32f9c3
   },
   {
     id: '4',
     selected: false,
-<<<<<<< HEAD
     name: "Julian Leudesdorff",
     email: "julian.leudesdorff@susiandjames.com", 
     status: "Active",
     roles: "Admin, Editor, Viewer",
     environment: "Dr. Eckermann & Bauer", 
-=======
-    name: 'Dulian Leudesdorffd',
-    email: 'julian.leudesdorff@susiandjames.com',
-
-    status: 'Active',
-    roles: 'Admin, Editor, Viewer',
-    environment: 'Dr. Eckermann & Bauer',
->>>>>>> 1835a9287e575777a9960e5f7597c05c5c32f9c3
   },
   {
     id: '5',
@@ -97,10 +58,6 @@ const Users = [
   },
 ];
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1835a9287e575777a9960e5f7597c05c5c32f9c3
 // Sorting function
 const sortedList = (data, order, item) => {
   if (order === 'up') {
@@ -111,10 +68,6 @@ const sortedList = (data, order, item) => {
   }
 };
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1835a9287e575777a9960e5f7597c05c5c32f9c3
 class SelectTableComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -124,11 +77,7 @@ class SelectTableComponent extends React.Component {
       SelectedList: [],
       show: false,
       currentSort: 'up',
-<<<<<<< HEAD
     }; 
-=======
-    };
->>>>>>> 1835a9287e575777a9960e5f7597c05c5c32f9c3
   }
 
   handleModal() {
@@ -191,7 +140,6 @@ class SelectTableComponent extends React.Component {
     });
   };
 
-<<<<<<< HEAD
   
   render() { 
     
@@ -226,18 +174,6 @@ class SelectTableComponent extends React.Component {
                 {sortedList( this.state.List, this.state.currentSort, 'id' ).map((user) => (
                   <tr key={user.id} className={user.selected ? "selected" : ""}>
                     <th scope="row">
-=======
-  render() {
-    return (
-      <>
-        <div className='table-componet'>
-          <div className='row'>
-            <div className='col-md-12'>
-              <table className='table'>
-                <thead>
-                  <tr>
-                    <th scope='col'>
->>>>>>> 1835a9287e575777a9960e5f7597c05c5c32f9c3
                       <input
                         type='checkbox'
                         className='form-check-input'
@@ -246,7 +182,6 @@ class SelectTableComponent extends React.Component {
                         onChange={(e) => this.onMasterCheck(e)}
                       />
                     </th>
-<<<<<<< HEAD
                     <td><span>{user.id}</span></td>
                     <td><span>{user.name}</span></td>
                     <td><span>{user.email}</span></td>
@@ -270,98 +205,6 @@ class SelectTableComponent extends React.Component {
       </Modal>
 
        
-=======
-                    <th onClick={this.onSortChange} scope='col' className='id'>
-                      ID <img src={aUp} />{' '}
-                    </th>
-                    <th scope='col' className='name'>
-                      Name
-                    </th>
-                    <th scope='col' className='email'>
-                      E-Mail
-                    </th>
-                    <th scope='col' className='password'>
-                      Password
-                    </th>
-                    <th scope='col' className='status'>
-                      Status
-                    </th>
-                    <th scope='col' className='roles'>
-                      Roles
-                    </th>
-                    <th scope='col' className='enviro'>
-                      Environment
-                    </th>
-                    <th scope='col'></th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  {sortedList(
-                    this.state.List,
-                    this.state.currentSort,
-                    'id'
-                  ).map((user) => (
-                    <tr
-                      key={user.id}
-                      className={user.selected ? 'selected' : ''}
-                    >
-                      <th scope='row'>
-                        <input
-                          type='checkbox'
-                          checked={user.selected}
-                          className='form-check-input'
-                          id='rowcheck{user.id}'
-                          onChange={(e) => this.onItemCheck(e, user)}
-                        />
-                      </th>
-                      <td>
-                        <span>{user.id}</span>
-                      </td>
-                      <td>
-                        <span>{user.name}</span>
-                      </td>
-                      <td>
-                        <span>{user.email}</span>
-                      </td>
-                      <td
-                        className='pass-r'
-                        onClick={() => {
-                          this.handleModal();
-                        }}
-                      >
-                        <span>
-                          <img src={key} alt='' /> Reset Password
-                        </span>
-                      </td>
-                      <td className='active'>
-                        <span>{user.status}</span>
-                      </td>
-                      <td>
-                        <span>{user.roles}</span>
-                      </td>
-                      <td>
-                        <span>{user.environment}</span>
-                      </td>
-                      <td>
-                        <a href=''>
-                          <img src={search} alt='' />
-                        </a>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              {/* <button
-              className="btn btn-primary"
-              onClick={() => this.getSelectedRows()}
-            >
-              Get Selected Items {this.state.SelectedList.length} 
-            </button> */}
-            </div>
-          </div>
-        </div>
->>>>>>> 1835a9287e575777a9960e5f7597c05c5c32f9c3
 
         <Modal
           className='rpass-modal'
