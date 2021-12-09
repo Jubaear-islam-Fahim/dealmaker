@@ -66,7 +66,7 @@ const ManagementSingleUser = () => {
                                                 </div>
                                                 <div className="status">
                                                     <div className="h6">Status</div>
-                                                    <a href="/">Active</a>
+                                                    <a>Active</a>
                                                 </div>
                                                 <div className="password">
                                                     <div className="h6">Password</div>
