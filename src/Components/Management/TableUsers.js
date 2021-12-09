@@ -203,32 +203,7 @@ class SelectTableComponent extends React.Component {
       <Modal className="rpass-modal" show={this.state.show} onHide={()=>{this.handleModal()}} animation={false}>
         <ModalReset/>
       </Modal>
-
-       
-
-        <Modal
-          className='rpass-modal'
-          show={this.state.show}
-          onHide={() => {
-            this.handleModal();
-          }}
-          animation={false}
-        >
-          <Modal.Header closeButton>Reset Password</Modal.Header>
-          <Modal.Body>
-            <p>
-              Do you wish to reset the Password of{' '}
-              <Link to='/'>Julian Leudesdorff</Link> ?
-            </p>
-            <p>
-              The reset password link will be sent to{' '}
-              <Link to='/'>julian.leudesdorff@susiandjames.com</Link>
-            </p>
-            <div className='modal-btn'>
-              <Link to='/single-users'>Reset Password</Link>
-            </div>
-          </Modal.Body>
-        </Modal>
+ 
       </>
     );
   }
