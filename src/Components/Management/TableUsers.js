@@ -183,7 +183,7 @@ class SelectTableComponent extends React.Component {
                       />
                     </th>
                     <td><span>{user.id}</span></td>
-                    <td><span>{user.name}</span></td>
+                    <td><span><Link to="/single-users">{user.name}</Link></span></td>
                     <td><span>{user.email}</span></td>
                     <td className="pass-r" onClick={()=>{this.handleModal()}}><span><img src={key} /> Reset Password</span></td>
                     <td className={user.status}><span>{user.status}</span></td>
