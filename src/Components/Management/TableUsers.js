@@ -1,80 +1,89 @@
-import React from "react";
+import React from 'react';
 import './management.scss';
 
-import { Modal } from "react-bootstrap";
-import { Link } from "react-router-dom";
- 
+import { Modal } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 import search from '../../images/sesr.png';
 import key from '../../images/key.png';
 import aUp from '../../images/aup.png';
- 
 
 const Users = [
   {
-    id: 1,
+    id: '1',
     selected: false,
-    name: "Julian Leudesdorff",
-    email: "julian.leudesdorff@susiandjames.com",
-    
-    status: "Active",
-    roles: "Admin, Editor, Viewer",
-    environment: "Dr. Eckermann & Bauer", 
+    name: 'Aulian Leudesdorf',
+    email: 'julian.leudesdorff@susiandjames.com',
+
+    status: 'Active',
+    roles: 'Admin, Editor, Viewer',
+    environment: 'Dr. Eckermann & Bauer',
   },
   {
-    id: 2,
+    id: '2',
     selected: false,
-    name: "Julian Leudesdorff",
-    email: "julian.leudesdorff@susiandjames.com",
-    
-    status: "Active",
-    roles: "Admin, Editor, Viewer",
-    environment: "Dr. Eckermann & Bauer", 
+    name: 'Bulian Leudesdorff',
+    email: 'julian.leudesdorff@susiandjames.com',
+
+    status: 'Active',
+    roles: 'Admin, Editor, Viewer',
+    environment: 'Dr. Eckermann & Bauer',
   },
   {
-    id: 3,
+    id: '3',
     selected: false,
-    name: "Julian Leudesdorff",
-    email: "julian.leudesdorff@susiandjames.com",
-    
-    status: "Active",
-    roles: "Admin, Editor, Viewer",
-    environment: "Dr. Eckermann & Bauer", 
+    name: 'Culian Leudesdorff3',
+    email: 'julian.leudesdorff@susiandjames.com',
+
+    status: 'Active',
+    roles: 'Admin, Editor, Viewer',
+    environment: 'Dr. Eckermann & Bauer',
   },
   {
-    id: 4,
+    id: '4',
     selected: false,
-    name: "Julian Leudesdorff",
-    email: "julian.leudesdorff@susiandjames.com",
-    
-    status: "Active",
-    roles: "Admin, Editor, Viewer",
-    environment: "Dr. Eckermann & Bauer", 
+    name: 'Dulian Leudesdorffd',
+    email: 'julian.leudesdorff@susiandjames.com',
+
+    status: 'Active',
+    roles: 'Admin, Editor, Viewer',
+    environment: 'Dr. Eckermann & Bauer',
   },
   {
-    id: 5,
+    id: '5',
     selected: false,
-    name: "Julian Leudesdorff",
-    email: "julian.leudesdorff@susiandjames.com", 
-    status: "Active",
-    roles: "Admin, Editor, Viewer",
-    environment: "Dr. Eckermann & Bauer", 
+    name: 'Eulian Leudesdorffc',
+    email: 'julian.leudesdorff@susiandjames.com',
+    status: 'Active',
+    roles: 'Admin, Editor, Viewer',
+    environment: 'Dr. Eckermann & Bauer',
   },
 ];
 
+// Sorting function
+const sortedList = (data, order, item) => {
+  if (order === 'up') {
+    return data.sort((a, b) => (a[item] > b[item] ? 1 : -1));
+  }
+  if (order === 'down') {
+    return data.sort((a, b) => (a[item] > b[item] ? -1 : 1));
+  }
+};
+
 class SelectTableComponent extends React.Component {
-  
   constructor(props) {
     super(props);
     this.state = {
       List: Users,
       MasterChecked: false,
       SelectedList: [],
-      show: false
+      show: false,
+      currentSort: 'up',
     };
   }
 
   handleModal() {
-    this.setState({show:!this.state.show})
+    this.setState({ show: !this.state.show });
   }
 
   // Select/ UnSelect Table rows
@@ -120,84 +129,150 @@ class SelectTableComponent extends React.Component {
     });
   }
 
+  onSortChange = () => {
+    const { currentSort } = this.state;
+    let nextSort;
+
+    if (currentSort === 'down') nextSort = 'up';
+    else if (currentSort === 'up') nextSort = 'down';
+
+    this.setState({
+      currentSort: nextSort,
+    });
+  };
+
   render() {
     return (
       <>
-      <div className="table-componet">
-        <div className="row">
-          <div className="col-md-12">
-            <table className="table">
-              <thead>
-                <tr>
-                  <th scope="col">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      checked={this.state.MasterChecked}
-                      id="mastercheck"
-                      onChange={(e) => this.onMasterCheck(e)}
-                    />
-                  </th>
-                  <th scope="col" className="id">ID <img src={aUp}/> </th>
-                  <th scope="col" className="name">Name</th>
-                  <th scope="col" className="email">E-Mail</th>
-                  <th scope="col" className="password">Password</th>
-                  <th scope="col" className="status">Status</th>
-                  <th scope="col" className="roles">Roles</th>
-                  <th scope="col" className="enviro">Environment</th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.List.map((user) => (
-                  <tr key={user.id} className={user.selected ? "selected" : ""}>
-                    <th scope="row">
+        <div className='table-componet'>
+          <div className='row'>
+            <div className='col-md-12'>
+              <table className='table'>
+                <thead>
+                  <tr>
+                    <th scope='col'>
                       <input
-                        type="checkbox"
-                        checked={user.selected}
-                        className="form-check-input"
-                        id="rowcheck{user.id}"
-                        onChange={(e) => this.onItemCheck(e, user)}
+                        type='checkbox'
+                        className='form-check-input'
+                        checked={this.state.MasterChecked}
+                        id='mastercheck'
+                        onChange={(e) => this.onMasterCheck(e)}
                       />
                     </th>
-                    <td><span>{user.id}</span></td>
-                    <td><span>{user.name}</span></td>
-                    <td><span>{user.email}</span></td>
-                    <td className="pass-r" onClick={()=>{this.handleModal()}}><span><img src={key} /> Reset Password</span></td>
-                    <td className="active"><span>{user.status}</span></td>
-                    <td><span>{user.roles}</span></td>
-                    <td><span>{user.environment}</span></td>
-                    <td><a href=""><img src={search}/></a></td>
+                    <th onClick={this.onSortChange} scope='col' className='id'>
+                      ID <img src={aUp} />{' '}
+                    </th>
+                    <th scope='col' className='name'>
+                      Name
+                    </th>
+                    <th scope='col' className='email'>
+                      E-Mail
+                    </th>
+                    <th scope='col' className='password'>
+                      Password
+                    </th>
+                    <th scope='col' className='status'>
+                      Status
+                    </th>
+                    <th scope='col' className='roles'>
+                      Roles
+                    </th>
+                    <th scope='col' className='enviro'>
+                      Environment
+                    </th>
+                    <th scope='col'></th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-            {/* <button
+                </thead>
+
+                <tbody>
+                  {sortedList(
+                    this.state.List,
+                    this.state.currentSort,
+                    'id'
+                  ).map((user) => (
+                    <tr
+                      key={user.id}
+                      className={user.selected ? 'selected' : ''}
+                    >
+                      <th scope='row'>
+                        <input
+                          type='checkbox'
+                          checked={user.selected}
+                          className='form-check-input'
+                          id='rowcheck{user.id}'
+                          onChange={(e) => this.onItemCheck(e, user)}
+                        />
+                      </th>
+                      <td>
+                        <span>{user.id}</span>
+                      </td>
+                      <td>
+                        <span>{user.name}</span>
+                      </td>
+                      <td>
+                        <span>{user.email}</span>
+                      </td>
+                      <td
+                        className='pass-r'
+                        onClick={() => {
+                          this.handleModal();
+                        }}
+                      >
+                        <span>
+                          <img src={key} alt='' /> Reset Password
+                        </span>
+                      </td>
+                      <td className='active'>
+                        <span>{user.status}</span>
+                      </td>
+                      <td>
+                        <span>{user.roles}</span>
+                      </td>
+                      <td>
+                        <span>{user.environment}</span>
+                      </td>
+                      <td>
+                        <a href=''>
+                          <img src={search} alt='' />
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              {/* <button
               className="btn btn-primary"
               onClick={() => this.getSelectedRows()}
             >
               Get Selected Items {this.state.SelectedList.length} 
             </button> */}
-            
+            </div>
           </div>
         </div>
-      </div>
 
-        <Modal className="rpass-modal" show={this.state.show} onHide={()=>{this.handleModal()}} animation={false}>
-            <Modal.Header closeButton>
-              Reset Password
-            </Modal.Header>
-            <Modal.Body > 
-                <p>
-                    Do you wish to reset the Password of <Link to="/">Julian Leudesdorff</Link> ? 
-                </p>
-                <p>
-                    The reset password link will be sent to  <Link to="/">julian.leudesdorff@susiandjames.com</Link>
-                </p>
-                <div className="modal-btn" ><Link to="/single-users">Reset Password</Link></div>
-            </Modal.Body> 
+        <Modal
+          className='rpass-modal'
+          show={this.state.show}
+          onHide={() => {
+            this.handleModal();
+          }}
+          animation={false}
+        >
+          <Modal.Header closeButton>Reset Password</Modal.Header>
+          <Modal.Body>
+            <p>
+              Do you wish to reset the Password of{' '}
+              <Link to='/'>Julian Leudesdorff</Link> ?
+            </p>
+            <p>
+              The reset password link will be sent to{' '}
+              <Link to='/'>julian.leudesdorff@susiandjames.com</Link>
+            </p>
+            <div className='modal-btn'>
+              <Link to='/single-users'>Reset Password</Link>
+            </div>
+          </Modal.Body>
         </Modal>
-
       </>
     );
   }
