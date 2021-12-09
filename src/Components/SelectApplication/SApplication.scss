@@ -50,7 +50,8 @@
         font-size: 13px;
         padding: 12px 25px;
         display: inline-block;
-        color: var(--bs-gray-100)
+        color: #fff !important;
+        cursor: pointer;
     }
 }
 
@@ -110,6 +111,7 @@
             border-radius: 10px;
             font-weight: 500;
             font-size: 16px;
+            cursor: pointer;
             span{
                 color: var(--primary-color);
             }

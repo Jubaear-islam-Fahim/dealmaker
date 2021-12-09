@@ -54,7 +54,7 @@ const SApplication = () => {
                                     </div>
                                 </div> 
                                 <div className="switch">
-                                    <Link to="/">Switch Environment</Link>
+                                    <a>Switch Environment</a>
                                 </div>
                             </div>
                         </div>
