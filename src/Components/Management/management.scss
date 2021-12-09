@@ -205,7 +205,7 @@
         line-height: 28px;
 
         a {
-            color: #18A0FB;
+            color: #18A0FB !important;
         }
     }
  
@@ -232,6 +232,19 @@
         .modaltwo{
             display: block;
         }
+    }
+    .modalbooter{
+        position: relative;
+        padding: 0;
+        .btn-close{ 
+            position: absolute;
+            left: 0;
+            width: 180px;
+            top: 10px;
+            right: auto;
+            background: no-repeat;
+        }
+        
     }
 }
 
