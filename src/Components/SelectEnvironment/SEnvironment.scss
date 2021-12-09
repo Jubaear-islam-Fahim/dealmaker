@@ -332,4 +332,40 @@
     .page-url ul .active a { 
         font-size: 17px; 
     }
+    .recent-environment {
+        padding-top: 35px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px){
+    .page-url ul .active a { 
+        font-size: 13px; 
+    }
+    .page-url ul li::after { 
+        margin-left: 6px;
+    }
+    .page-url ul { 
+        gap: 7px; 
+    }
+    .navleft a img {
+        height: 36px;
+    }
+    .navleft { 
+        gap: 9px; 
+    }
+    .management-user .user-list li { 
+        margin: 5px;
+    }
+    .management-user .user-list {
+        display: inline-block; 
+        margin: 10px 0 25px;
+    }
+    .management-user .search-meta input {
+        min-width: 289px;
+        width: 100%;
+    }
+    .con-pass .reset-pss { 
+        padding-bottom: 20px;
+    }
+    
 }
