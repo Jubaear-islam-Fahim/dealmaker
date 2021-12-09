@@ -46,7 +46,7 @@ export const SidebarData = [
   },
   {
     title: 'Add ins',
-    path: '/',
+    path: '/single-users',
     icon: Add_ins,
     cName: 'nav-text'
   }
