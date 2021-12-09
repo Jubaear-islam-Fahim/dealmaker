@@ -75,7 +75,7 @@ const SApplication = () => {
                                         </div>
                                     </div>
                                     <div className="start-btn">
-                                        <a href="/">Start App</a>
+                                        <a>Start App</a>
                                     </div>
                                 </div> 
                                 <div className="recent-environment-item">
@@ -92,7 +92,7 @@ const SApplication = () => {
                                         </div>
                                     </div>
                                     <div className="start-btn">
-                                        <a href="/">Start App</a>
+                                        <a>Start App</a>
                                     </div>
                                 </div> 
                                 <div className="recent-environment-item">
@@ -108,7 +108,7 @@ const SApplication = () => {
                                         </div>
                                     </div>
                                     <div className="start-btn">
-                                        <a href="/">Start App</a>
+                                        <a>Start App</a>
                                     </div>
                                 </div> 
                                 
