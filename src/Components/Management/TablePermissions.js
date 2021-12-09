@@ -30,6 +30,16 @@ const Users = [
   
 ];
 
+// Sorting function
+const sortedList = (data, order, item) => {
+  if (order === 'up') {
+    return data.sort((a, b) => (a[item] > b[item] ? 1 : -1));
+  }
+  if (order === 'down') {
+    return data.sort((a, b) => (a[item] > b[item] ? -1 : 1));
+  }
+}
+
 class TableRoles extends React.Component {
   
   constructor(props) {
@@ -38,7 +48,8 @@ class TableRoles extends React.Component {
       List: Users,
       MasterChecked: false,
       SelectedList: [],
-      show: false
+      show: false,
+      currentSort: 'up',
     };
   }
 
@@ -89,6 +100,17 @@ class TableRoles extends React.Component {
     });
   }
 
+  onSortChange = () => {
+    const {currentSort} = this.state;
+    let nextSort;
+
+    if (currentSort === 'down') nextSort = 'up';
+    if (currentSort === 'up') nextSort = 'down';
+    this.setState({
+      currentSort: nextSort,
+    });
+  };
+
   render() {
     return (
       <>
@@ -107,7 +129,7 @@ class TableRoles extends React.Component {
                       onChange={(e) => this.onMasterCheck(e)}
                     />
                   </th>
-                  <th scope="col" className="id">ID <img src={aUp}/></th>
+                  <th onClick={this.onSortChange} scope="col" className="id">ID <img src={aUp}/>{' '}</th>
                   <th scope="col" className="name">Permission Name</th>
                   <th scope="col" className="desc">Description</th>
                   <th scope="col" className="desc">Application</th>
@@ -118,7 +140,7 @@ class TableRoles extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                {this.state.List.map((user) => (
+                {sortedList(this.state.List, this.state.currentSort, 'id').map((user) => (
                   <tr key={user.id} className={user.selected ? "selected" : ""}>
                     <th scope="row">
                       <input

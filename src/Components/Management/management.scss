@@ -81,6 +81,10 @@
         }
     }
 
+    .id{
+        cursor: pointer;
+    }
+
     .pass-r {
         span {
             gap: 10px;
@@ -95,7 +99,8 @@
         }
     }
 
-    .active {
+    .Inactive,
+    .Active {
         span {
             justify-content: center;
             background: #d0fae5;
@@ -105,9 +110,35 @@
             padding: 8px 13px;
             border-radius: 30px;
             text-align: center;
-            width: 58.07px;
-        }
+            width: 55px;
+        } 
+    }
 
+    .Inactive{
+        span{
+            background: #E6E8F0;
+            color: #616161;
+            width: 65px;
+        }
+    }
+
+    .Environments{
+        span{
+            grid-gap: 10px;
+            gap: 10px;
+            background: #051B5D;
+            border-radius: 5px;
+            font-weight: normal;
+            font-size: 12px;
+            color: #FFFFFF;
+            width: 140px;
+            padding: 8px;
+            cursor: pointer;
+            &::before{
+                content: url("../../images/3dod.png");
+                transform: translateY(-2px);
+            }
+        }
     }
 
     .bts {
@@ -177,16 +208,30 @@
             color: #18A0FB;
         }
     }
-
-    .modal-btn a {
+ 
+    .modal-btn {
         background: #051B5D;
-        color: white;
+        color: white !important;
         border-radius: 5px;
         width: 193.23px;
         height: 36px;
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+    }
+
+    .modalcont{
+        .modalOne{}
+        .modaltwo{
+            display: none;
+        }
+    }
+    .modalcont.active{
+        .modalOne{display: none;}
+        .modaltwo{
+            display: block;
+        }
     }
 }
 
@@ -440,8 +485,7 @@
             display: inline-block;
         }
     
-        .ress a {
-            display: flex;
+        .ress { 
             gap: 10px;
             background: #051B5D;
             border-radius: 5px;
@@ -450,6 +494,9 @@
             color: #FFFFFF;
             padding: 5px 15px;
             cursor: pointer;
+            img{
+                margin-right: 8px;
+            }
         }
     
         .active {

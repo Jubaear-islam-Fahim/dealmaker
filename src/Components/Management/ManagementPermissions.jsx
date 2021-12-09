@@ -1,5 +1,5 @@
 import React, {useState} from 'react';  
-import { Breadcrumb } from 'react-bootstrap';   
+import { Modal, } from 'react-bootstrap';   
 import { FaSearch } from "react-icons/fa";
 import './management.scss';
  
@@ -12,10 +12,14 @@ import useri from '../../images/usersi.png';
 import permisioni from '../../images/permisioni.png';
 import rolesi from '../../images/rolesi.png';
 import key from '../../images/key.png';
+import { ModalReset } from './ModalReset';
  
  
 
 const ManagementPermissions = () => { 
+    const [show, setShow] = useState(false); 
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
   
     return (
         <>
@@ -44,11 +48,14 @@ const ManagementPermissions = () => {
                                 </div>
                                 <div className="reset-pss">
                                     <ul>
-                                        <li className="ress"><Link to=""><img src={key} /> Reset Password</Link></li>
+                                        <li className="ress" onClick={handleShow}><img src={key} /> Reset Password</li>
                                         <li className="active">Active</li>
                                     </ul>
                                 </div>
                             </div>
+                            <Modal className="rpass-modal" show={show} onHide={handleClose} animation={false}>
+                                <ModalReset/>
+                            </Modal>
                         </div> 
                          <TablePermissions/>
                     </div> 

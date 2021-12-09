@@ -1,6 +1,7 @@
-import React from 'react';
-import { Breadcrumb } from 'react-bootstrap'; 
+import React, {useState} from 'react';
+import { Modal } from 'react-bootstrap'; 
 import './management.scss';
+import { ModalReset } from './ModalReset';
  
 import NavBar from '../NavBar/NavBar';  
 import TableTracker from './TableTracker'
@@ -15,6 +16,10 @@ import file from '../../images/file.png';
 import dod from '../../images/3dod.png';
 
 const ManagementSingleUser = () => {
+    const [show, setShow] = useState(false); 
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <>
             <NavBar/>
@@ -65,7 +70,7 @@ const ManagementSingleUser = () => {
                                                 </div>
                                                 <div className="password">
                                                     <div className="h6">Password</div>
-                                                    <a href=""><img src={key} /> Reset Password</a>
+                                                    <a onClick={handleShow}><img src={key} /> Reset Password</a>
                                                 </div>
                                                 <div className="company">
                                                     <a href=""><img src={file} /> Company Profile</a>
@@ -111,6 +116,9 @@ const ManagementSingleUser = () => {
                                     </div>
                                 </div>
                             </div>
+                            <Modal className="rpass-modal" show={show} onHide={handleClose} animation={false}>
+                                <ModalReset/>
+                            </Modal>
                             
                         </div>  
                         <div className="single-table">
