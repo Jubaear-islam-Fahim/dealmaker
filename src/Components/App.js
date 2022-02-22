@@ -19,6 +19,7 @@ const App = () => {
       <Router>  
         <Switch> 
           <Route exact path='/' component={SEnvironment} />
+          <Route exact path='/environment' component={SEnvironment} />
           <Route exact path='/application' component={SApplication} />
           <Route exact path='/users' component={ManagementUsers} />
           <Route exact path='/single-users' component={ManagementSingleUser} />

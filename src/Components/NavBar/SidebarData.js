@@ -10,7 +10,7 @@ import Add_ins from '../../images/nav/more_horiz.png';
 export const SidebarData = [
   {
     title: 'Dashboard',
-    path: '/',
+    path: '/users',
     icon: Home,
     cName: 'nav-text'
   },
