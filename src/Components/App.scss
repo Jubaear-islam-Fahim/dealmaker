@@ -2,6 +2,11 @@
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
 
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
+
+// font-family: 'Heebo', sans-serif;
+// font-family: 'Nunito', sans-serif;
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -28,7 +33,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 :root{
-	--primary-color: #FABA15;
+	--primary-color: #32eac6;
 
 	--primary-bg: linear-gradient(180deg, #494092 0%, #252149 100%);
 }
@@ -53,8 +58,8 @@ table {
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
-	background: #F3F6FF;
+    font-family: 'Heebo', sans-serif;
+	background: #f3f6ff;
 }
 
 .btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
@@ -79,4 +84,8 @@ main.wrapper {
 
 #root{
 	display: flex;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5{
+	font-family: 'Nunito', sans-serif;
 }

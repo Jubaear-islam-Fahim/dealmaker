@@ -1,49 +1,42 @@
 
 import Home from '../../images/nav/home.png';
-import Analytics from '../../images/nav/analytics.png';
-import Management from '../../images/nav/management.png';
-import Calender from '../../images/nav/calender.png';
-import Workflows from '../../images/nav/workflows.png';
-import Database from '../../images/nav/database.png'; 
+import Companies from '../../images/nav/companies.png';
+import AccountBalance from '../../images/nav/account_balance.png';
+import CheckCircleOutline from '../../images/nav/check_circle_outline.png';
+import AccountBox from '../../images/nav/account_box.png'; 
 import Add_ins from '../../images/nav/more_horiz.png';
 
 export const SidebarData = [
   {
     title: 'Dashboard',
-    path: '/users',
+    path: '/',
     icon: Home,
     cName: 'nav-text'
   },
   {
-    title: 'Analytics',
-    path: '/',
-    icon: Analytics,
+    title: 'Companies',
+    path: '/companies',
+    icon: Companies,
     cName: 'nav-text'
   },
   {
-    title: 'Dialogue Management',
+    title: 'Account Balance',
     path: '/',
-    icon: Management,
+    icon: AccountBalance,
     cName: 'nav-text'
   },
   {
-    title: 'Calender',
+    title: 'CalCheck Circle Outlineender',
     path: '/',
-    icon: Calender,
+    icon: CheckCircleOutline,
     cName: 'nav-text'
   },
   {
-    title: 'Workflows',
+    title: 'Account Box',
     path: '/',
-    icon: Workflows,
+    icon: AccountBox,
     cName: 'nav-text'
-  },
-  {
-    title: 'Database',
-    path: '/',
-    icon: Database,
-    cName: 'nav-text'
-  },
+  }, 
   {
     title: 'Add ins',
     path: '/',

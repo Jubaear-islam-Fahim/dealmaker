@@ -1,0 +1,367 @@
+.companies-area {}
+
+.page-top-title {
+    .h2 {
+        font-size: 26px;
+        line-height: 20px;
+        color: #071b6d;
+        font-weight: 700;
+        font-family: "Nunito";
+        padding-bottom: 5px;
+    }
+
+    p {
+        font-weight: 400;
+        font-family: "Nunito";
+        color: #071b6d;
+        font-size: 19px;
+    }
+}
+
+.companies-nav {
+    display: grid;
+    grid-template-columns: 1fr 30%;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 25px;
+    margin-top: 35px;
+
+    .companies-nav-right {
+        margin-left: auto;
+    }
+
+    ul {
+        display: flex;
+        gap: 10px;
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            font-size: 14px;
+            line-height: 24px;
+            font-family: "Heebo";
+            text-transform: capitalize;
+            padding: 8px 12px;
+            border-radius: 4px;
+            color: #333842;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            svg {
+                font-size: 17px;
+            }
+
+            &:hover {
+                background-color: var(--primary-color);
+                color: #fff;
+            }
+        }
+
+        .active {
+            background: var(--primary-color);
+            color: #ffffff;
+        }
+    }
+
+    form {
+        position: relative;
+
+        input {
+            width: 259px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            border: 1px solid #071b6d;
+            padding: 0 1.1cm 0 10px;
+            font-size: 16px;
+
+            outline: none;
+
+            ::placeholder {
+                color: #B3BBC5;
+            }
+
+            :focus-visible {
+                border: 0;
+            }
+        }
+
+        button {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 0;
+            background: none;
+            height: 100%;
+            padding: 3px 15px;
+        }
+    }
+}
+
+
+.table-componet {
+    margin-top: 20px;
+
+    .table{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        overflow: hidden;
+    }
+
+    thead {
+        border-radius: 4px;
+        background-color: #455491;
+
+        th {
+            padding: 18px 20px !important;
+        }
+    }
+
+    tbody {
+        background-color: #fff;
+    }
+
+    .form-check-input {
+        width: 16px;
+        height: 16px;
+    }
+
+    th {
+        font-size: 15px;
+        line-height: 20px;
+        color: #ffffff;
+        font-weight: 500;
+        font-family: "Heebo";
+    }
+
+    .table>:not(:first-child) {
+        border: 0;
+
+        tr {
+            border-bottom: 1px solid #dfdfdf;
+            font-size: 14px;
+            color: #03081A;
+            &:hover{
+                background-color: #9CFFEC;
+            }
+        }
+
+    }
+
+    .table>:not(caption)>*>* {
+        padding: 14px 20px;
+        align-items: center;
+    }
+
+    td {
+        span {
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+            height: 21px;
+
+            a {
+                color: black;
+            }
+        }
+
+        &:last-child {
+            float: right;
+        }
+    }
+
+    .id {
+        cursor: pointer;
+    }
+
+    .pass-r {
+        span {
+            gap: 10px;
+            background: #051B5D;
+            border-radius: 5px;
+            font-weight: normal;
+            font-size: 12px;
+            color: #FFFFFF;
+            width: 140px;
+            padding: 8px;
+            cursor: pointer;
+        }
+    }
+
+    .Inactive,
+    .Active {
+        span {
+            justify-content: center;
+            background: #d0fae5;
+            font-weight: normal;
+            font-size: 12px;
+            color: #00B158;
+            padding: 8px 13px;
+            border-radius: 30px;
+            text-align: center;
+            width: 55px;
+        }
+    }
+
+    .Inactive {
+        span {
+            background: #E6E8F0;
+            color: #616161;
+            width: 65px;
+        }
+    }
+
+    .Environments {
+        span {
+            grid-gap: 10px;
+            gap: 10px;
+            background: #051B5D;
+            border-radius: 5px;
+            font-weight: normal;
+            font-size: 12px;
+            color: #FFFFFF;
+            width: 140px;
+            padding: 8px;
+            cursor: pointer;
+
+            &::before {
+                content: url("../../images/3dod.png");
+                transform: translateY(-2px);
+            }
+        }
+    }
+
+    .bts {
+        span {
+            background: #051B5D;
+            border-radius: 5px;
+            color: #fff;
+            gap: 10px;
+            justify-content: center;
+        }
+
+    }
+
+    .bts1 {
+        span {
+            width: 150px;
+            font-size: 13px;
+        }
+    }
+
+    .bts2 {
+        span {
+            width: 100px;
+            font-size: 13px;
+        }
+    }
+
+    td {
+        .status-btn {
+            font-size: 14x;
+            color: #fff;
+            width: 120px;
+            height: 31px;
+            border-radius: 16px;
+            background-color: #3239ea;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .New {
+        a {
+
+            background-color: #3239EA;
+        }
+    }
+
+    .Interested {
+        a {
+
+            background-color: #9052DF;
+        }
+    }
+
+    .Matched {
+        a {
+
+            background-color: #57EA32;
+        }
+    }
+
+    .Closed {
+        a {
+
+            background-color: #32EAC6;
+        }
+    }
+
+    .Bought {
+        a {
+
+            background-color: #1CA68B;
+        }
+    }
+
+    .Exit {
+        a {
+
+            background-color: #EA8A32;
+        }
+    }
+
+    tr {
+        .name {
+            font-size: 15px; 
+            color: #333842;
+            font-weight: 500;
+            font-family: "Heebo";
+        }
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 900px) {
+    .table-componet .col-md-12 {
+        overflow-x: auto;
+    }
+
+    .table-componet {
+        .id {
+            min-width: 35px;
+        }
+
+        .roles,
+        .enviro,
+        .name {
+            min-width: 182px;
+        }
+
+        .used {
+            min-width: 100px;
+        }
+
+        .desc {
+            min-width: 130px;
+        }
+
+        .descrp {
+            min-width: 300px;
+        }
+    }
+
+    .single-user-content .single-row {
+        grid-template-columns: 1fr;
+    }
+
+    .single-user-content .single-user-from {
+        grid-template-columns: 1fr 158px;
+    }
+
+}
