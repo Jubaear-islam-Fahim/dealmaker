@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Companies.scss";
+import "./MAadvisors.scss";
 
 import { VscSearch, VscChromeClose } from "react-icons/vsc";
 import { AiOutlinePlus } from "react-icons/ai";
@@ -8,11 +8,11 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { BsChevronDoubleLeft, BsChevronLeft, BsChevronDoubleRight, BsChevronRight } from "react-icons/bs";
 
 // import Table_users from './TableUsers'; 
-import CompanyTable from "./companyTable"
+import AdvisorsTable from "./advisorsTable";
 
 import NavBar from "../NavBar/NavBar";
 
-const Companies = () => {
+const MAadvisors = () => {
   return (
     <>
         <NavBar />
@@ -20,7 +20,7 @@ const Companies = () => {
             <div className="page-content">
                 <div className="companies-area">
                     <div className="page-top-title">
-                        <div className="h2">Companies</div>
+                        <div className="h2">M&A advisors</div>
                         <p>Overview</p>
                     </div>
                     <div className="companies-nav">
@@ -42,7 +42,7 @@ const Companies = () => {
                     </div>
 
                     <div className="company-data-table">
-                        <CompanyTable/>
+                        <AdvisorsTable/>
                     </div>
                     
 
@@ -53,4 +53,4 @@ const Companies = () => {
   );
 };
 
-export default Companies;
+export default MAadvisors;

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Companies.scss";
 
 import { VscSearch, VscChromeClose } from "react-icons/vsc";
 import { AiOutlinePlus } from "react-icons/ai";
@@ -8,20 +7,27 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { BsChevronDoubleLeft, BsChevronLeft, BsChevronDoubleRight, BsChevronRight } from "react-icons/bs";
 
 // import Table_users from './TableUsers'; 
-import CompanyTable from "./companyTable"
+import MatchesTable from "./matchesTable"; 
 
 import NavBar from "../NavBar/NavBar";
+import "./Matches.scss";
+import { Link } from "react-router-dom";
 
-const Companies = () => {
+const Matches = () => {
   return (
     <>
         <NavBar />
         <main className="wrapper">
             <div className="page-content">
                 <div className="companies-area">
-                    <div className="page-top-title">
-                        <div className="h2">Companies</div>
-                        <p>Overview</p>
+                    <div className="page-top-title page-matches">
+                        <div className="h2">Matches for</div>
+                        <p>Matched M&A advisors</p>
+                        <div className="unisell-btn">
+                            <Link to="matchesCompanies" className="uBtn">Unisell GmbH</Link>
+                            <Link className="vpBtn">view profile <i class="fa-solid fa-chevron-right"></i></Link>
+                            
+                        </div>
                     </div>
                     <div className="companies-nav">
                         <div className="companies-nav-left">
@@ -42,7 +48,7 @@ const Companies = () => {
                     </div>
 
                     <div className="company-data-table">
-                        <CompanyTable/>
+                        <MatchesTable/>
                     </div>
                     
 
@@ -53,4 +59,4 @@ const Companies = () => {
   );
 };
 
-export default Companies;
+export default Matches;

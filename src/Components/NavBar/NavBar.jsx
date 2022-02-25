@@ -12,7 +12,7 @@ import setting from '../../images/nav/settings.png';
 import { SidebarData } from './SidebarData';
 
 import { FaCog, FaBell, FaLock, FaUserAlt, FaSignOutAlt  } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     const [sidebar, setSidebar] = useState(false); 
@@ -35,7 +35,7 @@ const NavBar = () => {
                 </div>  
                 <Dropdown align="end" className="navUser" id="dropdown-menu-align-end">
                     <Dropdown.Toggle >
-                      <img src={user} alt="" />  <span className="Uname">Julian Leudesdorff</span>
+                      <img src={user} alt="" />  <span className="Uname">Mario Kronbeg</span>
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu className="userList">
@@ -55,16 +55,16 @@ const NavBar = () => {
             {SidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
-                  <Link to={item.path}>
+                  <NavLink exact to={item.path}>
                     <img src={item.icon} />
                     <span className="text">{item.title}</span>
-                  </Link>
+                  </NavLink>
                 </li>
               );
             })}
           </ul>
           <ul className="bottomList"> 
-                <li><Link to="/users"><img src={setting} /></Link></li>
+                <li><Link to="/"><img src={setting} /></Link></li>
             </ul>
         </nav>
 

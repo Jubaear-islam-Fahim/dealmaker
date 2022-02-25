@@ -59,34 +59,38 @@
     width: 300px;
     padding: 25px;
     padding: 20px;
-    border: 0; 
+    border: 0;
     margin-top: 18px;
     background: #FFFFFF;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
+
     ul {
         display: grid;
         gap: 18px;
     }
+
     li a {
         color: var(--block);
         font-size: 14px;
         display: block;
         font-weight: 500;
-        &:hover{
+
+        &:hover {
             color: var(--primary-color)
         }
     }
 }
- 
+
 .cog-nav,
 .bell-nav {
-    position: relative; 
-    
+    position: relative;
+
 }
+
 .cog-nav a,
-.bell-nav a { 
-    color: #81838C; 
+.bell-nav a {
+    color: #81838C;
     font-size: 20px;
 }
 
@@ -102,7 +106,7 @@
     top: 0px;
 }
 
-.navToggle{
+.navToggle {
     border: 0;
     background: none;
     outline: none;
@@ -114,60 +118,85 @@
 .sidebarNav {
     background: var(--primary-bg);
     width: 0px;
-    display: grid; 
+    display: grid;
     justify-content: center;
     height: calc(100vh - 80px);
     padding-top: 30px;
     position: relative;
-    top: 80px; 
+    top: 80px;
     left: 0;
     transition: all .3s linear;
-    ul{
+
+    ul {
         margin: 0 10px;
-         
-        li{
+
+        li {
             margin-bottom: 10px;
         }
-        a{
-            
+
+        a {
+
             border-radius: 10px;
             width: 60px;
             height: 58px;
             display: grid;
             align-items: center;
             justify-content: center;
-            &:hover{
+
+            &:hover {
                 background: var(--primary-color);
             }
         }
-        .text{
+        .active{
+            background: var(--primary-color);
+        }
+
+        .text {
             display: none;
         }
     }
 
-    .bottomList{
+    .bottomList {
         margin-top: auto;
     }
-     
+
 }
 
-.sidebarNav.active{
+.sidebarNav.active {
     width: 80px;
     z-index: 1;
 }
 
-@media (min-width: 320px) and (max-width: 1380px){
-    .sidebarNav ul a { 
-        width: 45px;
-        height: 43px; 
+.check-cc {
+    a {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 9px;
+            top: 9px; 
+            background: #FF4949;
+            width: 8px;
+            height: 8px;
+            border-radius: 10px;
+        }
     }
+}
+
+@media (min-width: 320px) and (max-width: 1380px) {
+    .sidebarNav ul a {
+        width: 45px;
+        height: 43px;
+    }
+
     .sidebarNav ul a img {
         width: 80%;
         margin: 0 auto;
     }
 }
 
-@media (min-width: 320px) and (max-width: 900px){
+@media (min-width: 320px) and (max-width: 900px) {
     span.Uname {
         display: none;
     }

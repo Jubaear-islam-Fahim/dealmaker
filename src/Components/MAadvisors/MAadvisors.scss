@@ -14,7 +14,7 @@
         font-weight: 400;
         font-family: "Nunito";
         color: #071b6d;
-        font-size: 19px;
+        font-size: 17px;
     }
 }
 
@@ -328,15 +328,8 @@
             font-family: "Heebo";
         }
     }
-    td:last-child a {
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        height: 30px;
-    }
 
 }
- 
 
 .pagination-content {
     display: grid;
@@ -352,7 +345,6 @@
             padding: 13px 14px;
             border-radius: 4px;
             cursor: pointer;
-            display: inline-block;
             &:hover{
                 background-color: #081C6E;
                 color: #fff;

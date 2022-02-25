@@ -20,26 +20,26 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Account Balance',
-    path: '/',
+    title: 'M&A Advisors',
+    path: '/advisors',
     icon: AccountBalance,
     cName: 'nav-text'
   },
   {
-    title: 'CalCheck Circle Outlineender',
-    path: '/',
+    title: 'Matched M&A advisors',
+    path: '/matches',
     icon: CheckCircleOutline,
-    cName: 'nav-text'
+    cName: 'nav-text check-cc'
   },
   {
     title: 'Account Box',
-    path: '/',
+    path: '/account',
     icon: AccountBox,
     cName: 'nav-text'
   }, 
   {
     title: 'Add ins',
-    path: '/',
+    path: '/addIns',
     icon: Add_ins,
     cName: 'nav-text'
   }
