@@ -38,14 +38,14 @@ const NavBar = () => {
                       <img src={user} alt="" />  <span className="Uname">Mario Kronbeg</span>
                     </Dropdown.Toggle>
 
-                    <Dropdown.Menu className="userList">
+                    {/* <Dropdown.Menu className="userList">
                         <ul>
                             <li><h6 class="text-overflow m-0">Welcome !</h6></li>
                             <li><Link to="/"><FaUserAlt/> My Account</Link></li>
                             <li><Link to="/"><FaLock/> Lock Screen</Link></li>
                             <li><Link to="/"><FaSignOutAlt/> Sign Out</Link></li> 
                         </ul> 
-                    </Dropdown.Menu>
+                    </Dropdown.Menu> */}
                 </Dropdown>
             </div>
         </div>
