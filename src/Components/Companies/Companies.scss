@@ -377,6 +377,24 @@
 
 
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .table-componet .table > :not(caption) > * > * {
+        padding: 10px 9px; 
+    }
+    .table-componet tr .name {
+        font-size: 14px; 
+    }
+    .companies-source .source-head .source-left { 
+        gap: 30px;
+    }
+    .companies-source .source-head .source-logo {
+        width: auto;
+    }
+    .companies-source .source-head .source-logo .s-logo {
+        
+        padding: 10px 10px;
+    }
+}
 @media (min-width: 320px) and (max-width: 900px) {
     .table-componet .col-md-12 {
         overflow-x: auto;
@@ -413,5 +431,28 @@
     .single-user-content .single-user-from {
         grid-template-columns: 1fr 158px;
     }
+
+    .companies-nav .companies-nav-right { 
+        display: none;
+    }
+
+    .table-componet{
+        th{
+            &:nth-child(1){
+                width: auto;
+            }
+        }
+    }
+
+    .table-componet td .progress,
+    .table-componet td span { 
+        width: 150px;
+    }
+    .table-componet tr .name span{
+        width: 200px;
+    }
+
+     
+
 
 }

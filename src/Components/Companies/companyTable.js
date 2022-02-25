@@ -248,6 +248,7 @@ class TableComponent extends React.Component {
                                 </tbody>
                             </table>
 
+                        </div>
                             <div className="pagination-content">
                                 <ul>
                                     <li><BsChevronDoubleLeft/></li>
@@ -263,7 +264,6 @@ class TableComponent extends React.Component {
                                     <span>1 of 2 pages (16 items)</span>
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </>

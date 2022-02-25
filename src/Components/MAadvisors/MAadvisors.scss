@@ -407,3 +407,33 @@
     }
 
 }
+
+@media (min-width: 320px) and (max-width: 500px) {
+      
+    .companies-nav{
+        grid-template-columns: 1fr;
+    }
+    .companies-nav-left {
+        overflow: hidden;
+    }
+    .companies-nav ul { 
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .pagination-content{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .pagination-content ul {
+        order: 1; 
+        text-align: center;
+    }
+    .pagination-content { 
+        padding: 10px 8px;
+    }
+    .pagination-content .pageRight span {
+        font-size: 12px;
+    }
+    
+
+}

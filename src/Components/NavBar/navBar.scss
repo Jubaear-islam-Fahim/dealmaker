@@ -200,4 +200,55 @@
     span.Uname {
         display: none;
     }
+    .navleft { 
+        gap: 10px; 
+    }
+    .navleft a img {
+        width: 109px;
+    }
+    .navUser .dropdown-toggle img {
+        width: 35px;
+        height: 35px; 
+    }
+    .navright {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        grid-gap: 18px;
+        gap: 12px;
+    }
+    
+    
+
+}
+@media (min-width: 320px) and (max-width: 500px) {
+     
+    .navleft { 
+        gap: 10px; 
+    }
+    .navleft a img {
+        width: 109px;
+    }
+    .navUser .dropdown-toggle img {
+        width: 35px;
+        height: 35px; 
+    }
+    .navright {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        grid-gap: 18px;
+        gap: 12px;
+    }
+    button.navToggle img {
+        height: 27px;
+    }
+    .navbar-area { 
+        padding: 0px 15px; 
+    }
+    
+    
+    
+    
+
 }

@@ -196,20 +196,20 @@ class TableComponent extends React.Component {
                                 </tbody>
                             </table>
 
-                            <div className="pagination-content">
-                                <ul>
-                                    <li><BsChevronDoubleLeft /></li>
-                                    <li><BsChevronLeft /></li>
-                                    <li>1</li>
-                                    <li className="active">2</li>
-                                    <li>3</li>
-                                    <li>4</li>
-                                    <li><BsChevronDoubleRight /></li>
-                                    <li><BsChevronRight /></li>
-                                </ul>
-                                <div className="pageRight">
-                                    <span>1 of 2 pages (16 items)</span>
-                                </div>
+                        </div>
+                        <div className="pagination-content">
+                            <ul>
+                                <li><BsChevronDoubleLeft /></li>
+                                <li><BsChevronLeft /></li>
+                                <li>1</li>
+                                <li className="active">2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li><BsChevronDoubleRight /></li>
+                                <li><BsChevronRight /></li>
+                            </ul>
+                            <div className="pageRight">
+                                <span>1 of 2 pages (16 items)</span>
                             </div>
                         </div>
                     </div>
