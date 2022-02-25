@@ -120,8 +120,7 @@ class TableComponent extends React.Component {
         });
     };
 
-    render() {
-        console.log(this.state.List);
+    render() { 
 
         return (
             <>
