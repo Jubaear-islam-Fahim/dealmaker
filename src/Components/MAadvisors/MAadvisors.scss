@@ -147,15 +147,13 @@
             font-size: 14px;
             color: #03081A;
 
-            &:hover {
-                background-color: #CAFAF6;
-            }
+            
         }
 
     }
 
     .table>:not(caption)>*>* {
-        padding: 12px 20px;
+        padding: 15px 20px;
         align-items: center;
         vertical-align: middle;
     }
@@ -406,19 +404,15 @@
         grid-template-columns: 1fr 158px;
     }
 
-}
-
-@media (min-width: 320px) and (max-width: 500px) {
-      
-    .companies-nav{
-        grid-template-columns: 1fr;
-    }
-    .companies-nav-left {
-        overflow: hidden;
-    }
-    .companies-nav ul { 
-        overflow: hidden;
+    .companies-nav { 
         overflow-x: scroll;
+    }
+    .companies-nav form input {
+        width: 200px; 
+    }
+
+    .companies-nav { 
+        gap: 25px;
     }
     .pagination-content{
         grid-template-columns: 1fr;
@@ -437,5 +431,18 @@
     .companies-nav{
         padding: 15px;
     }
+    .companies-nav .companies-nav-right { 
+        padding-right: 15px;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+    .pagination-content ul li {
+        width: 31px;
+        height: 31px;
+        padding: 8px 10px;
+    } 
+    
 
 }

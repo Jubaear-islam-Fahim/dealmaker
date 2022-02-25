@@ -11,7 +11,7 @@ import MatchesTable from "./matchesTable";
 
 import NavBar from "../NavBar/NavBar";
 import "./Matches.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Matches = () => {
   return (

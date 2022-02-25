@@ -15,6 +15,8 @@ import NavBar from "../NavBar/NavBar";
 
 import Basic from "./Basic";
 import Financials from "./Financials";
+import Sectors from "./Sectors";
+import Others from "./Others";
 
 import "./Matches.scss";
 import { Link } from "react-router-dom";
@@ -115,10 +117,10 @@ const MatchesCompanies = () => {
                                         <Financials/>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="three">
-                                        Sectors
+                                        <Sectors/>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="four">
-                                        Others
+                                        <Others/>
                                     </Tab.Pane>
                                 </Tab.Content>
                             </Tab.Container>

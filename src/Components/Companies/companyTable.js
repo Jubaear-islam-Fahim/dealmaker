@@ -48,7 +48,7 @@ const Users = [
         selected: false,
         name: 'Richter Elektronik',
         industry: 'Electronics',
-        employees: '1 - 1-',
+        employees: '1 - 1',
         last_annu: '5.2M €',
         status: 'Matched',
         images: [bulbGreen, construction],
@@ -79,7 +79,7 @@ const Users = [
         selected: false,
         name: 'Koch Metallverarbeitung GmbH',
         industry: 'Metal Processing',
-        employees: '1 -10',
+        employees: '1 - 10',
         last_annu: '0.85M €',
         status: 'Exit done',
         images: [construction],
@@ -158,112 +158,110 @@ class TableComponent extends React.Component {
         return (
             <>
                 <div className='table-componet'>
-                    <div className='row'>
-                        <div className='col-md-12'>
-                            <table className='table'>
-                                <thead>
-                                    <tr>
-                                        <th onClick={this.onSortChange} scope='col' className='id'>
-                                            Name <BsArrowDown /> {''}
-                                        </th>
-                                        <th scope='col' className='industry'>
-                                            Industry
-                                        </th>
-                                        <th scope='col' className='password'>
-                                            Employees
-                                        </th>
-                                        <th scope='col' className='status'>
-                                            Last annu. T/O
-                                        </th>
-                                        <th scope='col' className='last_annu'>
-                                            Deal-Status
-                                        </th>
-                                        <th scope='col' className='enviro'>
-                                            Classes
-                                        </th>
-                                        <th scope='col'></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {sortedList(
-                                        this.state.List,
-                                        this.state.currentSort,
-                                        'id'
-                                    ).map((user) => (
-                                        <tr
-                                            key={user.id}
-                                            className={user.selected ? 'selected' : ''}
-                                        >
-                                            <td className='name'>
-                                                <span>{user.name}</span>
-                                            </td>
-                                            <td>
-                                                <span>{user.industry}</span>
-                                            </td>
-                                            <td>
-                                                <span>{user.employees}</span>
-                                            </td>
-                                            <td>
-                                                <span>{user.last_annu}</span>
-                                            </td>
-                                            <td className={user.status}>
-                                                <a className='status-btn' href='#'>
-                                                    {user.status}
-                                                </a>
-                                            </td>
-                                            <td className={user.classesT}>
-                                                <span>
-                                                    {/* {user.images.map((src) => (
+                    <div className='col-md-12'>
+                        <table className='table'>
+                            <thead>
+                                <tr>
+                                    <th onClick={this.onSortChange} scope='col' className='id'>
+                                        Name <BsArrowDown /> {''}
+                                    </th>
+                                    <th scope='col' className='industry'>
+                                        Industry
+                                    </th>
+                                    <th scope='col' className='password'>
+                                        Employees
+                                    </th>
+                                    <th scope='col' className='status'>
+                                        Last annu. T/O
+                                    </th>
+                                    <th scope='col' className='last_annu'>
+                                        Deal-Status
+                                    </th>
+                                    <th scope='col' className='enviro'>
+                                        Classes
+                                    </th>
+                                    <th scope='col'></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {sortedList(
+                                    this.state.List,
+                                    this.state.currentSort,
+                                    'id'
+                                ).map((user) => (
+                                    <tr
+                                        key={user.id}
+                                        className={user.selected ? 'selected' : ''}
+                                    >
+                                        <td className='name'>
+                                            <span>{user.name}</span>
+                                        </td>
+                                        <td>
+                                            <span>{user.industry}</span>
+                                        </td>
+                                        <td>
+                                            <span>{user.employees}</span>
+                                        </td>
+                                        <td>
+                                            <span>{user.last_annu}</span>
+                                        </td>
+                                        <td className={user.status}>
+                                            <a className='status-btn' href='#'>
+                                                {user.status}
+                                            </a>
+                                        </td>
+                                        <td className={user.classesT}>
+                                            <span>
+                                                {/* {user.images.map((src) => (
                             <img src={src} alt='img' />
                           ))} */}
 
-                                                    {user.images.slice(0, 3).map((src) => (
-                                                        <img src={src} alt='img' />
-                                                    ))}
-                                                    {user.images.length > 3 && (
-                                                        <span
-                                                            style={{
-                                                                height: 40,
-                                                                marginLeft: 8,
-                                                                fontWeight: 700,
-                                                                borderRadius: '50%',
-                                                                textAlign: 'center',
-                                                                lineHeight: '40px',
-                                                            }}
-                                                        >
-                                                            {' '}
-                                                            {user.images.length - 3}+
-                                                        </span>
-                                                    )}
-                                                    {/* <img src={user.classesT}></img> */}
-                                                </span>
-                                            </td>
-                                            <td>
-                                                <a href=''>
-                                                    <img src={nabdd} />
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                                                {user.images.slice(0, 3).map((src) => (
+                                                    <img src={src} alt='img' />
+                                                ))}
+                                                {user.images.length > 3 && (
+                                                    <span
+                                                        style={{
+                                                            height: 40,
+                                                            marginLeft: 8,
+                                                            fontWeight: 700,
+                                                            borderRadius: '50%',
+                                                            textAlign: 'center',
+                                                            lineHeight: '40px',
+                                                        }}
+                                                    >
+                                                        {' '}
+                                                        {user.images.length - 3}+
+                                                    </span>
+                                                )}
+                                                {/* <img src={user.classesT}></img> */}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <a href=''>
+                                                <img src={nabdd} />
+                                            </a>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
 
+                    </div>
+                    <div className="pagination-content">
+                        <ul>
+                            <li><BsChevronDoubleLeft /></li>
+                            <li><BsChevronLeft /></li>
+                            <li>1</li>
+                            <li className="active">2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li><BsChevronDoubleRight /></li>
+                            <li><BsChevronRight /></li>
+                        </ul>
+                        <div className="pageRight">
+                            <span>1 of 2 pages (16 items)</span>
                         </div>
-                            <div className="pagination-content">
-                                <ul>
-                                    <li><BsChevronDoubleLeft/></li>
-                                    <li><BsChevronLeft/></li>
-                                    <li>1</li>
-                                    <li className="active">2</li>
-                                    <li>3</li>
-                                    <li>4</li>
-                                    <li><BsChevronDoubleRight/></li>
-                                    <li><BsChevronRight/></li>
-                                </ul>
-                                <div className="pageRight">
-                                    <span>1 of 2 pages (16 items)</span>
-                                </div>
-                            </div>
                     </div>
                 </div>
             </>

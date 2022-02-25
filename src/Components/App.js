@@ -8,6 +8,8 @@ import Companies from './Companies/Companies';
 import MAadvisors from './MAadvisors/MAadvisors';
 import Matches from './Matches/Matches';
 import MatchesCompanies from './Matches/MatchesCompanies';
+import AddIns from './AddIns/AddIns';
+import Account from './Account/Account';
 
 
 import './App.scss'; 
@@ -22,6 +24,8 @@ const App = () => {
           <Route exact path='/advisors' component={MAadvisors} />
           <Route exact path='/matches' component={Matches} />
           <Route exact path='/matchesCompanies' component={MatchesCompanies} />
+          <Route exact path='/account' component={Account} />
+          <Route exact path='/addIns' component={AddIns} />
           
         </Switch>
             

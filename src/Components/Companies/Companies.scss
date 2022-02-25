@@ -148,7 +148,7 @@
             color: #03081A;
 
             &:hover {
-                background-color: #9CFFEC;
+                background-color: #CAFAF6;
             }
         }
 
@@ -431,9 +431,8 @@
     .single-user-content .single-user-from {
         grid-template-columns: 1fr 158px;
     }
-
-    .companies-nav .companies-nav-right { 
-        display: none;
+    .companies-nav form input {
+        width: 100%; 
     }
 
     .table-componet{

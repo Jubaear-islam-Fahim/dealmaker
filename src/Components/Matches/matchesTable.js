@@ -17,7 +17,7 @@ const Users = [
         name: 'Rechtsanwalt Dr. Eiblich',
         country: 'Germany',
         ct: '100',
-        atv: '1 - 10M €',  
+        atv: '1 - 10M €',
         ms: 50,
     },
     {
@@ -26,7 +26,7 @@ const Users = [
         name: 'Meyers Consulting',
         country: 'Germany',
         ct: '25',
-        atv: '10 - 50M €', 
+        atv: '10 - 50M €',
         ms: 85,
     },
     {
@@ -35,7 +35,7 @@ const Users = [
         name: 'BHG Steuerberatungsgesellschaft mbH',
         country: 'Switzerland',
         ct: '65',
-        atv: '1 - 10M €', 
+        atv: '1 - 10M €',
         ms: 19,
     },
     {
@@ -44,7 +44,7 @@ const Users = [
         name: 'Capital Management GmbH',
         country: 'Liechtenstein',
         ct: '350',
-        atv: '10 - 50M €', 
+        atv: '10 - 50M €',
         ms: 74,
     },
     {
@@ -53,7 +53,7 @@ const Users = [
         name: 'GBC Consulting GmhH',
         country: 'Switzerland',
         ct: '500',
-        atv: '10 - 50M €', 
+        atv: '10 - 50M €',
         ms: 98,
     },
     {
@@ -62,7 +62,7 @@ const Users = [
         name: 'TTC Transactions Ltd.',
         country: 'United Kingdom',
         ct: '240',
-        atv: '10 - 50M €', 
+        atv: '10 - 50M €',
         ms: 65,
     },
     {
@@ -71,7 +71,7 @@ const Users = [
         name: 'Hofstadt Richter & Partners',
         country: 'Austria',
         ct: '100',
-        atv: '1 - 10M €', 
+        atv: '1 - 10M €',
         ms: 78,
 
     },
@@ -81,7 +81,7 @@ const Users = [
         name: 'Rechtsanwalt Gold ',
         country: 'Switzerland',
         ct: '33',
-        atv: '1 - 10M €', 
+        atv: '1 - 10M €',
         ms: 71,
 
     },
@@ -91,7 +91,7 @@ const Users = [
         name: 'Hessen Financials GmbH',
         country: 'Germany',
         ct: '73',
-        atv: '10 - 50M €', 
+        atv: '10 - 50M €',
         ms: 94,
     },
 ];
@@ -131,86 +131,84 @@ class TableComponent extends React.Component {
 
     render() {
         console.log(this.state.List);
- 
+
 
         return (
             <>
                 <div className='table-componet'>
-                    <div className='row'>
-                        <div className='col-md-12'>
-                            <table className='table'>
-                                <thead>
-                                    <tr>
-                                        <th onClick={this.onSortChange} scope='col' className='id'>
-                                            Company Name <BsArrowDown /> {''}
-                                        </th>
-                                        <th scope='col' className='country'>
-                                            Country
-                                        </th>
-                                        <th scope='col' className='password'>
-                                            Completed Transactions
-                                        </th>
-                                        <th scope='col' className='status'>
-                                            Average Transaction Volume
-                                        </th>
-                                        <th scope='col' className='status'>
-                                            Matching Score
-                                        </th>
-                                        <th scope='col'></th>
+                    <div className='col-md-12'>
+                        <table className='table'>
+                            <thead>
+                                <tr>
+                                    <th onClick={this.onSortChange} scope='col' className='id'>
+                                        Company Name <BsArrowDown /> {''}
+                                    </th>
+                                    <th scope='col' className='country'>
+                                        Country
+                                    </th>
+                                    <th scope='col' className='password'>
+                                        Completed Transactions
+                                    </th>
+                                    <th scope='col' className='status'>
+                                        Average Transaction Volume
+                                    </th>
+                                    <th scope='col' className='status'>
+                                        Matching Score
+                                    </th>
+                                    <th scope='col'></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {sortedList(
+                                    this.state.List,
+                                    this.state.currentSort,
+                                    'id'
+                                ).map((user) => (
+                                    <tr
+                                        key={user.id}
+                                        className={user.selected ? 'selected' : ''}
+                                    >
+                                        <td className='name'>
+                                            <span>{user.name}</span>
+                                        </td>
+                                        <td>
+                                            <span>{user.country}</span>
+                                        </td>
+                                        <td>
+                                            <span>{user.ct}</span>
+                                        </td>
+                                        <td>
+                                            <span>{user.atv}</span>
+                                        </td>
+                                        <td>
+                                            {/* <span>{user.ms} </span> */}
+                                            <ProgressBar className={user.ms} now={user.ms} label={`${user.ms}`} />
+                                        </td>
+
+                                        <td>
+                                            <a href=''>
+                                                <img src={nabdd} />
+                                            </a>
+                                        </td>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    {sortedList(
-                                        this.state.List,
-                                        this.state.currentSort,
-                                        'id'
-                                    ).map((user) => (
-                                        <tr
-                                            key={user.id}
-                                            className={user.selected ? 'selected' : ''}
-                                        >
-                                            <td className='name'>
-                                                <span>{user.name}</span>
-                                            </td>
-                                            <td>
-                                                <span>{user.country}</span>
-                                            </td>
-                                            <td>
-                                                <span>{user.ct}</span>
-                                            </td>
-                                            <td>
-                                                <span>{user.atv}</span>
-                                            </td>
-                                            <td>
-                                                {/* <span>{user.ms} </span> */}
-                                                <ProgressBar className={user.ms} now={user.ms} label={`${user.ms}`} />
-                                            </td>
+                                ))}
+                            </tbody>
+                        </table>
 
-                                            <td>
-                                                <a href=''>
-                                                    <img src={nabdd} />
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-
-                        </div>
-                        <div className="pagination-content">
-                            <ul>
-                                <li><BsChevronDoubleLeft /></li>
-                                <li><BsChevronLeft /></li>
-                                <li>1</li>
-                                <li className="active">2</li>
-                                <li>3</li>
-                                <li>4</li>
-                                <li><BsChevronDoubleRight /></li>
-                                <li><BsChevronRight /></li>
-                            </ul>
-                            <div className="pageRight">
-                                <span>1 of 2 pages (16 items)</span>
-                            </div>
+                    </div>
+                    <div className="pagination-content">
+                        <ul>
+                            <li><BsChevronDoubleLeft /></li>
+                            <li><BsChevronLeft /></li>
+                            <li>1</li>
+                            <li className="active">2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li><BsChevronDoubleRight /></li>
+                            <li><BsChevronRight /></li>
+                        </ul>
+                        <div className="pageRight">
+                            <span>1 of 2 pages (16 items)</span>
                         </div>
                     </div>
                 </div>
