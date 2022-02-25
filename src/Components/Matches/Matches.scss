@@ -701,4 +701,35 @@ td {
             margin: 0 auto;
         }
     }
+    .unisell-btn {
+        position: relative;
+        top: 5px;
+        left: 0;
+        width: 200px;
+        margin-top: 11px;
+    }
+    .page-matches p {
+        padding-top: 2px;
+    }
+
+    .source-tab-head {
+        display: grid; 
+        gap: 20px; 
+        padding: 25px;
+    }
+    .source-tab-body .source-tab-body-left .h4 br{
+        display: none;
+    }
+    .source-tab-body .source-tab-body-right {
+        padding: 9px 20px;
+    }
+    .source-tab-body .source-tab-body-right .preference-progress .preference-name { 
+        padding-left: 13px;
+    }
+    .companies-source .source-head .source-logo .s-logo {
+        height: 60px; 
+    }
+    .companies-source .source-head {
+        padding: 33px 16px; 
+    }
 }
